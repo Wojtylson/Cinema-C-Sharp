@@ -1,0 +1,40 @@
+﻿<Window x:Class="GuiProjekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuiProjekt"
+        mc:Ignorable="d"
+        Title="CINEMA" Height="500" Width="800">
+    <Grid>
+
+        <!-- Użycie kontrolki MediaElement do odtwarzania pliku GIF -->
+        <MediaElement Margin="-10,-17,-15,-12" Source="Obrazy/LogoProjekt.gif" RenderTransformOrigin="0.5,0.5" >
+            <MediaElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.257"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.RenderTransform>
+            <MediaElement.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </MediaElement.OpacityMask>
+        </MediaElement>
+        <Image Source="Obrazy/Kleks.jpg" Stretch="Uniform" Margin="32,100,608,-100" MouseLeftButtonDown="OpisKleks"></Image>
+        <Image Source="Obrazy/Wonka.jpg" Stretch="Uniform" Margin="224,100,416,-100" MouseLeftButtonDown="OpisWonka"></Image>
+        <Image Source="Obrazy/Aquaman.jpg" Stretch="Uniform" Margin="416,100,224,-100" MouseLeftButtonDown="OpisAquaman"></Image>
+        <Image Source="Obrazy/Mickiewicz.jpg" Stretch="Uniform" Margin="609,100,32,-100" MouseLeftButtonDown="OpisMickiewicz"></Image>
+
+
+
+        <Label Content="WWF CINEMA" HorizontalAlignment="Left" Height="146" Margin="224,43,0,0" VerticalAlignment="Top" Width="456" FontFamily="Impact" FontSize="80" FontWeight="Bold" Foreground="White" Background="#00000000"/>
+        <Label Content="Kliknij w film, aby dowiedzieć się więcej" HorizontalAlignment="Center" Height="30" Margin="0,190,0,0" VerticalAlignment="Top" Width="244" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic"/>
+
+
+    </Grid>
+</Window>
